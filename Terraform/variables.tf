@@ -20,5 +20,10 @@ variable "public_key_path" {
   default     = "keys/proj-key.pub"
 }
 
+variable "instance_name" {
+  type    = string
+  default = "tf-devops-ubuntu-ci"
+}
+
 
 

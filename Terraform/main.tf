@@ -150,7 +150,7 @@ resource "aws_instance" "ubuntu_web" {
   associate_public_ip_address = true
 
   tags = {
-    Name = "tf-devops-ubuntu-public"
+    Name = var.instance_name
   }
 }
 
