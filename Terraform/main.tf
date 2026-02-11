@@ -115,7 +115,7 @@ resource "aws_security_group" "web_SG" {
 
 #Key pair
 resource "aws_key_pair" "key_pair" {
-  key_name   = "tf-devops-key"
+  key_name   = var.key_pair_name
   public_key = file(var.public_key_path)
 }
 

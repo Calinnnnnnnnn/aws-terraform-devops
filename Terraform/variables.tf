@@ -25,5 +25,10 @@ variable "instance_name" {
   default = "tf-devops-ubuntu-ci"
 }
 
+variable "key_pair_name" {
+  type    = string
+  default = "tf-devops-key"
+}
+
 
 
