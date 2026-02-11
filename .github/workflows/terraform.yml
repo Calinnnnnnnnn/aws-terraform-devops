@@ -37,5 +37,9 @@ jobs:
         run: terraform plan -input=false -var="my_ip_cidr=${{ secrets.MY_IP_CIDR }}"
         working-directory: Terraform
 
+      - name: Terraform apply
+        run: terraform apply -auto-approve -input=false -var="my_ip_cidr=${{ secrets.MY_IP_CIDR }}"
+        working-directory: Terraform
+
       - name: Test step
         run: echo "Pipeline works"
