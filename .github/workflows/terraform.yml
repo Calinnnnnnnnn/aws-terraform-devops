@@ -29,5 +29,13 @@ jobs:
       - name: STS
         run: aws sts get-caller-identity
 
+      - name: Terraform init
+        run: terraform init
+        working-directory: Terraform
+
+      - name: Terraform plan
+        run: terraform plan -input=false -var="my_ip_cidr=${{ secrets.MY_IP_CIDR }}"
+        working-directory: Terraform
+
       - name: Test step
         run: echo "Pipeline works"
