@@ -1,0 +1,12 @@
+name: Terraform Pipeline
+
+on:
+  push:
+    paths:
+      - "**/*.tf"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test step
+        run: echo "Pipeline works"
