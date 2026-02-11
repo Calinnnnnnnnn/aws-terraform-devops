@@ -17,7 +17,7 @@ variable "my_ip_cidr" {
 variable "public_key_path" {
   type        = string
   description = "Path to public key for SSH connection"
-  default     = "/keys"
+  default     = "Terraform/keys/proj-key.pub"
 }
 
 
