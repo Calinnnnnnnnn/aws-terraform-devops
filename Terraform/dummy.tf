@@ -1,1 +1,1 @@
-#dummy - setup terraform
+#dummy - aws test
