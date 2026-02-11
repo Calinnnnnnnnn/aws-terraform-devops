@@ -11,5 +11,13 @@ jobs:
       - name: Checkout step
         uses: actions/checkout@v4
 
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.6.0
+
+      - name: Verify Terraform
+        run: terraform version
+
       - name: Test step
         run: echo "Pipeline works"
