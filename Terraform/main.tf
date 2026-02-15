@@ -116,6 +116,14 @@ resource "aws_security_group" "web_SG" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    description = "Metrics"
+    from_port   = 9100
+    to_port     = 9100
+    protocol    = "tcp"
+    cidr_blocks = [var.my_ip_cidr]
+  }
+
   egress {
     description = "All outbound"
     from_port   = 0
